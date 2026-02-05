@@ -1,0 +1,10 @@
+# flyctl launch added from .gitignore
+# Eclipse
+**/.project
+**/.classpath
+**/.settings
+
+# Maven
+**/target
+
+fly.toml
