@@ -1,5 +1,5 @@
-# 构建阶段：使用 Maven + Java 8 编译打包
-FROM eclipse-temurin:8-jdk-alpine AS builder
+# 构建阶段：使用带 Maven 的 Java 8 镜像（eclipse-temurin 仅含 JDK 不含 mvn）
+FROM maven:3.8-eclipse-temurin-8 AS builder
 
 WORKDIR /app
 
