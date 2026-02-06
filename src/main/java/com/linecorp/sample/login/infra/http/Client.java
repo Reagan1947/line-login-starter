@@ -24,6 +24,8 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static com.linecorp.sample.login.infra.utils.OkHttpClientTool.getUnsafeOkHttpClient;
+
 /**
  * <p>HTTP request execution<p>
  */
@@ -39,7 +41,9 @@ public final class Client {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient client = getUnsafeOkHttpClient().newBuilder()
+            .addInterceptor(interceptor)
+            .build();
 
         Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(url)
