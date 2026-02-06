@@ -1,5 +1,5 @@
-# 构建阶段：使用带 Maven 的 Java 8 镜像（eclipse-temurin 仅含 JDK 不含 mvn）
-FROM maven:3.8-eclipse-temurin-8 AS builder
+# 构建阶段：使用带 Maven 的 Java 17 镜像（eclipse-temurin 仅含 JDK 不含 mvn）
+FROM maven:3.9-eclipse-temurin-17 AS builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY src ./src
 RUN mvn package -DskipTests -B
 
 # 运行阶段：使用精简 JRE 运行
-FROM eclipse-temurin:8-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 

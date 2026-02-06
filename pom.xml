@@ -12,9 +12,9 @@
   <name>line-login-starter</name>
   <url>https://github.com/line/line-login-starter</url>
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>17</java.version>
     <retrofit2.groupId>com.squareup.retrofit2</retrofit2.groupId>
-    <retrofit2.version>2.5.0</retrofit2.version>
+    <retrofit2.version>2.9.0</retrofit2.version>
   </properties>
 
   <!-- ================================================================ -->
@@ -25,7 +25,7 @@
     <!-- https://github.com/spring-projects/spring-boot/blob/master/LICENSE.txt -->
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.7.RELEASE</version>
+    <version>2.7.18</version>
   </parent>
 
   <!-- ================================================================ -->
@@ -59,15 +59,7 @@
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>
       <artifactId>logging-interceptor</artifactId>
-      <version>3.12.0</version>
-    </dependency>
-
-    <!-- use license 'The Apache License, Version 2.0' -->
-    <!-- https://github.com/google/gson/blob/master/LICENSE -->
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.6.2</version>
+      <version>4.11.0</version>
     </dependency>
 
     <!-- JWT library -->
@@ -76,7 +68,7 @@
     <dependency>
         <groupId>com.auth0</groupId>
         <artifactId>java-jwt</artifactId>
-        <version>3.2.0</version>
+        <version>3.19.2</version>
     </dependency>
 
   </dependencies>

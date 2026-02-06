@@ -127,10 +127,10 @@ public class LineAPIService {
                 .build()
                 .verify(id_token);
             return true;
-        } catch (UnsupportedEncodingException e) {
+        } catch (JWTVerificationException e) {
             //UTF-8 encoding not supported
             return false;
-        } catch (JWTVerificationException e) {
+        } catch (Exception e) {
             //Invalid signature/claims
             return false;
         }

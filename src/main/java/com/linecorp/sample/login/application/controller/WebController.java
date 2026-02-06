@@ -18,7 +18,8 @@ package com.linecorp.sample.login.application.controller;
 import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +39,7 @@ public class WebController {
 
     private static final String LINE_WEB_LOGIN_STATE = "lineWebLoginState";
     static final String ACCESS_TOKEN = "accessToken";
-    private static final Logger logger = Logger.getLogger(WebController.class);
+    private static final Logger logger = LoggerFactory.getLogger(WebController.class);
     private static final String NONCE = "nonce";
 
     @Autowired
