@@ -24,5 +24,4 @@ COPY --from=builder /app/target/line-login-starter.jar app.jar
 EXPOSE 9000
 
 # 使用 exec 形式以便正确接收信号
-# 强制 TLS 1.2，避免与 LINE 等现代 API 握手时报 insufficient_security（Java 8 默认可能协商到弱协议/加密套件）
-ENTRYPOINT ["java", "-Dhttps.protocols=TLSv1.2", "-Djdk.tls.client.protocols=TLSv1.2", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
